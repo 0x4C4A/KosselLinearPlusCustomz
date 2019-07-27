@@ -74,10 +74,10 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(Bids)" // Who made the changes. Bids: Change if you wish - informational only
+#define STRING_CONFIG_H_AUTHOR "0x4C4A" // Who made the changes. Bids: Change if you wish - informational only
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 "1.1.9" // will be shown during bootup in line 1
-#define STRING_SPLASH_LINE2 "Bids'O'KosselLP"         // will be shown during bootup in line 2. Bids - Change if you wish - informational only
+#define STRING_SPLASH_LINE2 "Anykubixis"         // will be shown during bootup in line 2. Bids - Change if you wish - informational only
 
 /**
  * *** VENDORS PLEASE READ ***
@@ -129,7 +129,7 @@
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
-#define CUSTOM_MACHINE_NAME "BIDS" // Bids: Name your printer whatever you wish
+#define CUSTOM_MACHINE_NAME "Anykubixis" // Bids: Name your printer whatever you wish
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
@@ -622,9 +622,12 @@
  *          TMC5130, TMC5130_STANDALONE
  * :['A4988', 'DRV8825', 'LV8729', 'L6470', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC26X', 'TMC26X_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE', 'TMC5130', 'TMC5130_STANDALONE']
  */
-#define X_DRIVER_TYPE  A4988 // Bids: I did not change the stepper driver, and my Kossel Linear plus apparently has those A4988
-#define Y_DRIVER_TYPE  A4988 
-#define Z_DRIVER_TYPE  A4988
+#define X_DRIVER_TYPE  TMC2130 // Bids: I did not change the stepper driver, and my Kossel Linear plus apparently has those A4988
+#define Y_DRIVER_TYPE  TMC2130 
+#define Z_DRIVER_TYPE  TMC2130 
+#define X_CS_PIN 4
+#define Y_CS_PIN 5
+#define Z_CS_PIN 6
 #define X2_DRIVER_TYPE A4988
 #define Y2_DRIVER_TYPE A4988
 #define Z2_DRIVER_TYPE A4988
@@ -933,9 +936,9 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR true // DELTA does not invert - DaHai: For TMC2130, you need to reverse the motor connectors
-#define INVERT_Y_DIR true
-#define INVERT_Z_DIR true
+#define INVERT_X_DIR false // DELTA does not invert - DaHai: For TMC2130, you need to reverse the motor connectors
+#define INVERT_Y_DIR false
+#define INVERT_Z_DIR false
 
 // @section extruder
 
@@ -1353,7 +1356,7 @@
 // @section temperature
 
 // Preheat Constants
-#define PREHEAT_1_TEMP_HOTEND 190 // DaHai: This is typically for PLA, set to your common temperatures
+#define PREHEAT_1_TEMP_HOTEND 200 // DaHai: This is typically for PLA, set to your common temperatures
 #define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
