@@ -553,7 +553,7 @@
   #define DELTA_DIAGONAL_ROD 271.50 // mm. Bids: From originak Kossel fw
 
   // height from z=0 to home position
-  #define DELTA_HEIGHT 302.85 // // mm. DaHai: This will be overriden and set in EEPROM when saving Auto Calibrate results
+  #define DELTA_HEIGHT 298.6 // // mm. DaHai: This will be overriden and set in EEPROM when saving Auto Calibrate results
 
   #define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // get these from auto calibrate
 
@@ -698,7 +698,7 @@
 
 // delta speeds must be the same on xyz
 #define DEFAULT_XYZ_STEPS_PER_UNIT ((XYZ_FULL_STEPS_PER_ROTATION) * (XYZ_MICROSTEPS) / double(XYZ_BELT_PITCH) / double(XYZ_PULLEY_TEETH))
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, 96.0 }  
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, 418.5 }  
 // Bids: last value of 96 (Extruder steps per unit) from original kossel firmware. Other value calculate to 80.0, which is same as in original Kossel firmware.
 
 /**
@@ -869,7 +869,7 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER 0     // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 0   // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -15.9 // Z offset: -below +above  [the nozzle] - DaHai: For Type 2 Probe!!!
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -17.3 // Z offset: -below +above  [the nozzle] - DaHai: For Type 2 Probe!!!
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 4000
